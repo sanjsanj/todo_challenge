@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="ToDoList">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/toDoListController.js"></script>
+  </head>
+
+  <body ng-controller="ToDoListController as ctrl">
+    <div>
+      <form class="form-horizontal">
+        <input type="text">
+        <button class="btn">Add</button>
+      </form>
+      <ul class="list-group">
+
+      </ul>
+    </div>
+  </body>
+</html>

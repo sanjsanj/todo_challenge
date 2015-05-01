@@ -1,0 +1,32 @@
+{
+  "name": "todo_challenge",
+  "version": "1.0.0",
+  "description": "* Deadline: submit completed pull request by 9am on Monday * You may use whatever level of JavaScript you feel comfortable with - pure JS, jQuery, Angular, or whatever weird and wonderful framework you want to try. Extra points for DogeScript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanjsanj/todo_challenge.git"
+  },
+  "author": "sanjsanj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanjsanj/todo_challenge/issues"
+  },
+  "homepage": "https://github.com/sanjsanj/todo_challenge",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.8.2",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "jasmine-core": "^2.3.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.8",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "dependencies": {}
+}
