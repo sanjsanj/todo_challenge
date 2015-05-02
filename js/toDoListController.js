@@ -5,16 +5,17 @@ toDoList.controller('ToDoListController', [function(){
   var self = this;
 
   self.addItem = function(item){
+    console.log("1");
     self.listActive.push(item);
+  };
+
+  self.isItemActive = function(item){
+    return self.listActive.indexOf(item) >= 0;
   };
 
   self.deleteItem = function(item){
 
-    function isItemActive(){
-      return self.listActive.indexOf(item) >= 0;
-    };
-
-    if (isItemActive()) {
+    if (self.isItemActive(item)) {
       self.listActive.splice(item, 1);
     } else {
       self.listCompleted.splice(item, 1);
@@ -23,11 +24,7 @@ toDoList.controller('ToDoListController', [function(){
 
   self.toggle = function(item){
 
-    function isItemActive(){
-      return self.listActive.indexOf(item) >= 0;
-    };
-
-    if (isItemActive()){
+    if (self.isItemActive(item)) {
       self.listCompleted.push(item);
       self.listActive.splice(item, 1);
     } else {
@@ -38,11 +35,7 @@ toDoList.controller('ToDoListController', [function(){
 
   self.editItem = function(item, newItem){
 
-    function isItemActive(){
-      return self.listActive.indexOf(item) >= 0;
-    };
-
-    if (isItemActive()){
+    if (self.isItemActive(item)) {
       var index = self.listActive.indexOf(item);
       self.listActive[index] = newItem;
     } else {
@@ -61,5 +54,9 @@ toDoList.controller('ToDoListController', [function(){
 
   self.completedTaskCount = function(){
     return self.listCompleted.length;
+  };
+
+  self.clearCompleted = function(){
+    this.listCompleted = [];
   };
 }]);

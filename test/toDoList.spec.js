@@ -52,8 +52,8 @@ describe('ToDoListController', function() {
     });
 
     it('can edit an active item', function(){
-      ctrl.editItem("Buy milk", "Buy more milk");
-      expect(ctrl.listActive).toContain("Buy more milk");
+      ctrl.editItem("Buy milk", "Drink milk");
+      expect(ctrl.listActive).toContain("Drink milk");
     });
 
     it('can delete an active item', function(){
@@ -78,8 +78,8 @@ describe('ToDoListController', function() {
     });
 
     it('can edit a completed item', function(){
-      ctrl.editItem("Buy milk", "Buy more milk");
-      expect(ctrl.listCompleted).toContain("Buy more milk");
+      ctrl.editItem("Buy milk", "Drink milk");
+      expect(ctrl.listCompleted).toContain("Drink milk");
     });
 
     it('can delete a completed item', function(){
@@ -90,6 +90,11 @@ describe('ToDoListController', function() {
     it('can mark it as active again', function(){
       ctrl.toggle("Buy milk");
       expect(ctrl.listActive).toContain("Buy milk");
+    });
+
+    it('can be cleared', function(){
+      ctrl.clearCompleted();
+      expect(ctrl.listCompleted).toEqual([]);
     });
   });
 });

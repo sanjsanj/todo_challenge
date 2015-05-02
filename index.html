@@ -13,11 +13,11 @@
 
   <body ng-controller="ToDoListController as ctrl">
     <div>
-      <form class="form-horizontal">
-        <input type="text">
-        <button class="btn">Add</button>
+      <form ng-submit="ctrl.addItem()" class="form-horizontal">
+        <input ng-model="button" type="text" placeholder="What needs doing?">
+        <button ng-click="ctrl.addItem()" class="btn">Add</button>
       </form>
-      <ul class="list-group" ng-repeat="item in ctrl.listActive">
+      <ul class="list-group" ng-repeat="item in ctrl.listActive track by $index">
         <li>
           {{item}}
         </li>
