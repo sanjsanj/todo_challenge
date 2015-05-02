@@ -39,8 +39,9 @@ describe('ToDoListController', function() {
       expect(ctrl.listActive).toEqual(["Buy milk", "Walk dog"]);
     });
 
-    xit('can edit an active item', function(){
-
+    it('can edit an active item', function(){
+      ctrl.editItem("Buy milk", "Buy more milk");
+      expect(ctrl.listActive).toContain("Buy more milk");
     });
 
     it('can delete an active item', function(){
@@ -64,8 +65,9 @@ describe('ToDoListController', function() {
       expect(ctrl.listCompleted).toContain("Buy milk");
     });
 
-    xit('can edit a completed item', function(){
-
+    it('can edit a completed item', function(){
+      ctrl.editItem("Buy milk", "Buy more milk");
+      expect(ctrl.listCompleted).toContain("Buy more milk");
     });
 
     it('can delete a completed item', function(){
