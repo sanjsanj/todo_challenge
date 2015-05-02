@@ -18,10 +18,6 @@
   "homepage": "https://github.com/sanjsanj/todo_challenge",
   "devDependencies": {
     "bower": "^1.4.1",
-    "grunt": "^0.4.5",
-    "grunt-contrib-jasmine": "^0.8.2",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-watch": "^0.6.1",
     "jasmine-core": "^2.3.0",
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.8",

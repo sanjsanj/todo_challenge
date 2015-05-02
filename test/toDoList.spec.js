@@ -17,6 +17,18 @@ describe('ToDoListController', function() {
     it('an empty completed list', function() {
       expect(ctrl.listCompleted).toEqual([]);
     });
+
+    it('a total task count of zero', function(){
+      expect(ctrl.totalTaskCount()).toEqual(0);
+    });
+
+    it('an active task count of zero', function(){
+      expect(ctrl.activeTaskCount()).toEqual(0);
+    });
+
+    it('a completed task count of zero', function(){
+      expect(ctrl.completedTaskCount()).toEqual(0);
+    });
   });
 
 

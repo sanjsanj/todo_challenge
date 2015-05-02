@@ -50,4 +50,16 @@ toDoList.controller('ToDoListController', [function(){
       self.listCompleted[index] = newItem;
     };
   };
+
+  self.totalTaskCount = function(){
+    return self.listActive.length + self.listCompleted.length;
+  };
+
+  self.activeTaskCount = function(){
+    return self.listActive.length;
+  };
+
+  self.completedTaskCount = function(){
+    return self.listCompleted.length;
+  };
 }]);
