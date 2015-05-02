@@ -9,12 +9,20 @@ toDoList.controller('ToDoListController', [function(){
   };
 
   self.deleteItem = function(item){
-    if (self.listActive.includes(item)) {
-      var index = self.listActive.indexOf(item)
-      self.listActive.splice(index, 1);
+    if (self.listActive.indexOf(item) >= 0) {
+      self.listActive.splice(item, 1);
     } else {
-      var index = self.listCompleted.indexOf(item);
-      self.listCompleted.splice(index, 1);
+      self.listCompleted.splice(item, 1);
+    };
+  };
+
+  self.toggle = function(item){
+    if (self.listCompleted.indexOf(item) === -1){
+      self.listCompleted.push(item);
+      self.listActive.splice(item, 1);
+    } else {
+      self.listActive.push(item);
+      self.listCompleted.splice(item, 1);
     };
   };
 }]);
