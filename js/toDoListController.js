@@ -1,11 +1,9 @@
 toDoList.controller('ToDoListController', [function(){
   var self = this;
+  self.listActive = [];
 
-  self.listDisplay = {
-    "items": [
-      {
-        "item": "Get milk"
-      }
-    ]
+  self.addItem = function(item){
+    self.listActive.push(item);
   };
+
 }]);

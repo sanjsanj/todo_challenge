@@ -17,8 +17,10 @@
         <input type="text">
         <button class="btn">Add</button>
       </form>
-      <ul class="list-group">
-
+      <ul class="list-group" ng-repeat="item in ctrl.listDisplay">
+        <li>
+          {{item}}
+        </li>
       </ul>
     </div>
   </body>

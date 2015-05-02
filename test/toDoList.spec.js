@@ -9,18 +9,21 @@ describe('ToDoListController', function() {
   }));
 
   it('initialises with an empty list', function() {
-    expect(ctrl.listDisplay).toBeUndefined();
+    expect(ctrl.listActive).toEqual([]);
   });
 
-  describe('When adding an item', function(){
-    var items = [
-      {
-        "item": "Get milk"
-      }
-    ];
+  describe('When adding items', function(){
+    var items = ["Get milk", "Wash car"];
 
-    it('displays the item', function(){
-      expect(ctrl.listDisplay.items).toEqual(items);
+    it('it can display 1 item', function(){
+      ctrl.addItem("Get milk");
+      expect(ctrl.listActive).toEqual(["Get milk"]);
+    });
+
+    it('it can display multiple items', function(){
+      ctrl.addItem("Get milk");
+      ctrl.addItem("Wash car");
+      expect(ctrl.listActive).toEqual(["Get milk", "Wash car"]);
     });
   });
 
