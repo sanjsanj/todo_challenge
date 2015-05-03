@@ -32,5 +32,5 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-istanbul-coverage');
   grunt.loadNpmTasks('grunt-karma-coveralls');
-  grunt.registerTask('default', ['jshint', 'coveralls']);
+  grunt.registerTask('default', ['jshint', 'coverage', 'coveralls']);
 };

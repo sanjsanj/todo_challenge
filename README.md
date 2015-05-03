@@ -1,6 +1,6 @@
 #Todo Challenge
 
-Travis-CI: [![Build Status](https://travis-ci.org/sanjsanj/todo_challenge.svg?branch=master)](https://travis-ci.org/sanjsanj/todo_challenge)  Coveralls: [![Coverage Status](https://coveralls.io/repos/sanjsanj/todo_challenge/badge.svg)](https://coveralls.io/r/sanjsanj/todo_challenge)
+[![Build Status](https://travis-ci.org/sanjsanj/todo_challenge.svg?branch=master)](https://travis-ci.org/sanjsanj/todo_challenge)  [![Coverage Status](https://coveralls.io/repos/sanjsanj/todo_challenge/badge.svg)](https://coveralls.io/r/sanjsanj/todo_challenge)
 
 ###[Use the web app on Heroku]()
 
