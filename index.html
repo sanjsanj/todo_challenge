@@ -17,7 +17,7 @@
         <input ng-model="newItem" type="text" placeholder="What needs doing?">
         <button ng-click="ctrl.addItem(newItem); newItem=''" class="btn">Add</button>
       </form>
-      <ul class="list-group" ng-repeat="item in ctrl.listActive track by $index">
+      <ul class="list-group" ng-repeat="item in ctrl.listActive track by $index ">
         <li>
           {{item}}
         </li>

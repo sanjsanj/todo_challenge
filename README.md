@@ -46,3 +46,4 @@ Aims:
 * Clear and expressive JavaScript
 * Good HTML5 markup and CSS
 * Deploy the Node.js app to Heroku
+* Setup Travis-CI

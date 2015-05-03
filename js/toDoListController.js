@@ -18,7 +18,7 @@ toDoList.controller('ToDoListController', [function(){
       self.listActive.splice(item, 1);
     } else {
       self.listCompleted.splice(item, 1);
-    };
+    }
   };
 
   self.toggle = function(item){
@@ -29,18 +29,18 @@ toDoList.controller('ToDoListController', [function(){
     } else {
       self.listActive.push(item);
       self.listCompleted.splice(item, 1);
-    };
+    }
   };
 
   self.editItem = function(item, newItem){
 
     if (self.isItemActive(item)) {
-      var index = self.listActive.indexOf(item);
-      self.listActive[index] = newItem;
+      var indexActive = self.listActive.indexOf(item);
+      self.listActive[indexActive] = newItem;
     } else {
-      var index = self.listCompleted.indexOf(item);
-      self.listCompleted[index] = newItem;
-    };
+      var indexCompleted = self.listCompleted.indexOf(item);
+      self.listCompleted[indexCompleted] = newItem;
+    }
   };
 
   self.totalTaskCount = function(){
