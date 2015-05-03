@@ -10,13 +10,6 @@ describe('ToDoList', function() {
       expect(browser.getTitle()).toEqual('To Do List');
     });
 
-    // it('prompts me to enter a ToDo item', function(){
-    //   var x = element(by.id('newItem'));
-    //   expect(x.getText()).toContain('What needs doing?');
-    //   expect(x.getText()).toEqual('What needs doing?');
-    //   expect(x).toEqual('What needs doing?');
-    // });
-
     it('has an input form', function() {
       expect(browser.isElementPresent(by.model('newItem'))).toBe(true);
     });
@@ -36,8 +29,11 @@ describe('ToDoList', function() {
     });
 
     it('it can display the item', function(){
-      // expect(activeItems.getText()).toContain("Get milk");
       expect(activeItems.getText()).toMatch(/Get milk/);
+    });
+
+    it('it has a checkbox to mark item as completed', function(){
+      expect(browser.isElementPresent(by.id('checkBoxModel.completed'))).toBe(true);
     });
 
     it('can delete the item', function(){
@@ -50,7 +46,7 @@ describe('ToDoList', function() {
     // });
 
     it('can toggle the item to completed', function(){
-      
+
     });
   });
 });
