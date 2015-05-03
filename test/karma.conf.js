@@ -15,10 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js',
-      'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-resource/angular-resource.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'lib/angular.min.js',
+      'lib/angular-route.js',
+      'lib/angular-resource.js',
+      'lib/angular-mocks.js',
       'js/**/*.js',
       'test/**/*.spec.js',
     ],
@@ -72,7 +72,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   };
 
   if(process.env.TRAVIS){
