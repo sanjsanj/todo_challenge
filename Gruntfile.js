@@ -17,10 +17,20 @@ module.exports = function(grunt){
           root: '.'
         }
       }
+    },
+    coveralls: {
+        options: {
+            debug: true,
+            coverageDir: 'coverage/',
+            dryRun: true,
+            force: true,
+            recursive: true
+        }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-istanbul-coverage');
-  grunt.registerTask('default', ['jshint', 'coverage']);
+  grunt.loadNpmTasks('grunt-karma-coveralls');
+  grunt.registerTask('default', ['jshint', 'coveralls']);
 };

@@ -42,10 +42,12 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
 
     coverageReporter: {
-      type : 'html',
-      dir : 'coverage/',
-      includeAllSources: true
+        type: "lcov",
+        dir: "coverage/"
     },
+    plugins: [
+        'karma-coverage',
+    ],
 
 
     // web server port
