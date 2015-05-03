@@ -1,5 +1,7 @@
 #Todo Challenge
 
+[![Build Status](https://travis-ci.org/sanjsanj/todo_challenge.svg?branch=master)](https://travis-ci.org/sanjsanj/todo_challenge)
+
 ###[Use the web app on Heroku]()
 
 ![todo challenge screenshot]()
