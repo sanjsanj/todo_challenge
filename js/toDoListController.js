@@ -5,7 +5,6 @@ toDoList.controller('ToDoListController', [function(){
   var self = this;
 
   self.addItem = function(item){
-    console.log("1");
     self.listActive.push(item);
   };
 
@@ -57,6 +56,6 @@ toDoList.controller('ToDoListController', [function(){
   };
 
   self.clearCompleted = function(){
-    this.listCompleted = [];
+    self.listCompleted = [];
   };
 }]);

@@ -13,9 +13,9 @@
 
   <body ng-controller="ToDoListController as ctrl">
     <div>
-      <form ng-submit="ctrl.addItem()" class="form-horizontal">
-        <input ng-model="button" type="text" placeholder="What needs doing?">
-        <button ng-click="ctrl.addItem()" class="btn">Add</button>
+      <form class="form-horizontal">
+        <input ng-model="newItem" type="text" placeholder="What needs doing?">
+        <button ng-click="ctrl.addItem(newItem); newItem=''" class="btn">Add</button>
       </form>
       <ul class="list-group" ng-repeat="item in ctrl.listActive track by $index">
         <li>
