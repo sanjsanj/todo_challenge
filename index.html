@@ -12,12 +12,13 @@
   </head>
 
   <body ng-controller="ToDoListController as ctrl">
+    <h1>To Do List</h1>
     <div>
       <form class="form-horizontal">
-        <input ng-model="newItem" type="text" placeholder="What needs doing?">
-        <button ng-click="ctrl.addItem(newItem); newItem=''" class="btn">Add</button>
+        <input ng-model="newItem" id="newItem" type="text" placeholder="What needs doing?">
+        <button ng-click="ctrl.addItem(newItem); newItem=''" class="btn" id="addNewItem">Add</button>
       </form>
-      <ul class="list-group" ng-repeat="item in ctrl.listActive track by $index ">
+      <ul class="list-group" ng-repeat="item in ctrl.listActive track by $index">
         <li>
           {{item}}
         </li>

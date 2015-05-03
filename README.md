@@ -8,7 +8,25 @@
 
 Task:
 -----
-Build a Todo list as a mini front-end application to satisfy the provided user stories.
+Build a Todo list as a mini front-end application to satisfy the provided user stories (listed below).
+
+How To Run:
+-----------
+####Setup:
+```
+npm start
+```
+```
+webdriver-manager start
+```
+
+####Tests:
+```
+protractor test/e2e/conf.js
+```
+```
+karma start test/karma.conf.js
+```
 
 User Stories:
 -------------
@@ -24,9 +42,11 @@ So that I have more time to think about other things
 As a person who actually gets stuff done
 I want to mark my tasks as done
 So that I don't do them twice
+```
 
 **Bonus:**
 
+```
 As a person with a lot of tasks
 I want to be able to filter my tasks by "All", "Active", "Complete"
 So that I only see the relevant tasks
@@ -46,4 +66,4 @@ Aims:
 * Clear and expressive JavaScript
 * Good HTML5 markup and CSS
 * Deploy the Node.js app to Heroku
-* Setup Travis-CI
+* Setup Travis-CI and Coveralls

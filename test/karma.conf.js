@@ -46,7 +46,7 @@ module.exports = function(config) {
       dir : 'coverage/',
       includeAllSources: true
     },
-
+    
 
     // web server port
     port: 9876,
