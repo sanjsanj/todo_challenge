@@ -4,7 +4,7 @@ toDoList.controller('ToDoListController', [function(){
   self.itemList = [];
 
   self.addItem = function(){
-    self.itemList.push({'name': this.newItem, 'isCompleted': false});
+    self.itemList.push({'name': self.newItem, 'isCompleted': false});
     self.newItem = '';
   };
 
