@@ -1,11 +1,3 @@
-/*body {
-  position:absolute;
-  top:0px;
-  bottom:0px;
-  left:0px;
-  right:0px;
-}*/
-
 .container {
   text-align: center;
   width: 400px;
@@ -14,6 +6,9 @@
 
 #pageTitle {
   /*margin-top: 15%;*/
+  margin: 20px;
+  font-size: 3em;
+  padding: 10px 50px;
 }
 
 .list-group-item {
@@ -38,6 +33,14 @@
   padding: 3px;
 }
 
-#clearButton {
-  margin: 12px;
+.todoTextClass {
+  border: none;
+}
+
+.btn-group {
+  margin: 18px;
+}
+
+.btn {
+  /*background-color: blue;*/
 }

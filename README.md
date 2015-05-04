@@ -4,11 +4,18 @@
 
 ###[Use the web app on Heroku]()
 
-![todo challenge screenshot]()
+![todo challenge screenshot](http://sanjsanj.github.io/images/week8_todo.png)
 
 Task:
 -----
 Build a Todo list as a mini front-end application to satisfy the provided user stories (listed below).
+
+Development Blog:
+-----------------
+- [Day 0](http://sanjsanj.github.io/Week%207,%20Day%205/)
+- [Day 1](http://sanjsanj.github.io/Week%207,%20Day%206/)
+- [Day 2](http://sanjsanj.github.io/Week%207,%20Day%207/)
+- [Day 3](http://sanjsanj.github.io/Week%208,%20Day%201/)
 
 How To Run:
 -----------
