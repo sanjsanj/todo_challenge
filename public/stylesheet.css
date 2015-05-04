@@ -1,3 +1,7 @@
+body {
+  background-color: #cfcfcf;
+}
+
 .container {
   text-align: center;
   width: 400px;
@@ -11,11 +15,16 @@
   font-size: 3em;
   padding: 10px 50px;
   width: 370px;
+  /*color: #e65949;*/
+  color: #0073c4;
+  border-radius: 5px;
 }
 
 .list-group-item {
-  display: inline-block;
+  width: 370px;
+  /*display: inline-block;*/
   list-style: none;
+  border-radius: 5px;
 }
 
 #formGroup {
@@ -33,6 +42,7 @@
 #todoText {
   margin: 10px;
   padding: 3px;
+  font-size: 1em;
 }
 
 .todoTextClass {
@@ -44,5 +54,11 @@
 }
 
 .btn {
-  /*background-color: blue;*/
+  background-color: #e65949;
+  color: white;
+}
+
+.btn-default {
+  background-color: #2d3e50;
+  color: white;
 }
