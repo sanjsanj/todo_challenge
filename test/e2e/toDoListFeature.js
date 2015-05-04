@@ -11,7 +11,7 @@ describe('ToDoList', function() {
     });
 
     it('has an input form', function() {
-      expect(browser.isElementPresent(by.model('newItem'))).toBe(true);
+      expect(browser.isElementPresent(by.model('ctrl.newItem'))).toBe(true);
     });
 
     it('has a submit button', function() {
@@ -21,11 +21,13 @@ describe('ToDoList', function() {
 
   describe('When creating an item', function(){
 
-    var activeItems = element.all(by.repeater('item in ctrl.listActive'));
+    var activeItems;
 
     beforeEach(function(){
-      element(by.model('newItem')).sendKeys("Get milk");
-      element(by.id('addNewItem')).click();
+      activeItems = element.all(by.repeater('item in ctrl.itemList'));
+
+      element(by.model('ctrl.newItem')).sendKeys("Get milk");
+      element(by.buttonText('Add')).click();
     });
 
     it('it can display the item', function(){
@@ -33,20 +35,13 @@ describe('ToDoList', function() {
     });
 
     it('it has a checkbox to mark item as completed', function(){
-      expect(browser.isElementPresent(by.id('checkBoxModel.completed'))).toBe(true);
+      expect(browser.isElementPresent(by.id('completeCheckbox'))).toBe(true);
     });
 
-    it('can delete the item', function(){
-      element(by.id('deleteItem')).click();
+    it('can clear completed items', function(){
+      element(by.id('completeCheckbox')).click();
+      element(by.buttonText('Clear Completed')).click();
       expect(activeItems.getText()).toBeEmpty;
-    });
-
-    // it('can edit the item', function(){
-    //
-    // });
-
-    it('can toggle the item to completed', function(){
-
     });
   });
 });

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>To Do List</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="public/stylesheet.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -12,22 +13,27 @@
   </head>
 
   <body ng-controller="ToDoListController as ctrl">
+    <div class="container">
+
     <h1>To Do List</h1>
-    <div>
 
       <form ng-submit="ctrl.addItem()" name="addItemForm" class="form-horizontal">
         <input ng-model="ctrl.newItem" name="newItemName" id="newItemId" type="text" placeholder="What needs doing?" required>
         <button ng-disabled="addItemForm.$invalid" class="btn" id="addNewItem">Add</button>
       </form>
 
-      <button ng-click="ctrl.clearCompleted()">Clear Completed</button>
+      <div ng-show="ctrl.itemList.length > 0">
+        Tasks: {{ctrl.itemList.length}}
+      </div>
 
-      <ul class="list-group">
+      <ul class="list-group-item">
         <li ng-repeat="item in ctrl.itemList track by $index">
-          <input ng-model="item.isCompleted" type="checkbox">
-          <span ng-class="{'isCompleted':item.isCompleted}"><input type="text" ng-model="item.name"></span>
+          <input ng-model="item.isCompleted" id="completeCheckbox" type="checkbox">
+          <span ng-class="{'isCompleted':item.isCompleted}"><input ng-model="item.name" type="text"></span>
         </li>
       </ul>
+
+      <button ng-click="ctrl.clearCompleted()">Clear Completed</button>
 
     </div>
   </body>
