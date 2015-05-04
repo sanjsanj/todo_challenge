@@ -5,24 +5,18 @@ body {
 .container {
   text-align: center;
   width: 400px;
-  /*align-content: center;*/
 }
 
 #pageTitle {
-  /*margin-top: 15%;*/
-  /*margin: 20px;*/
-  /*margin: 0 auto;*/
   font-size: 3em;
   padding: 10px 50px;
   width: 370px;
-  /*color: #e65949;*/
-  color: #0073c4;
+  color: #45528A;
   border-radius: 5px;
 }
 
 .list-group-item {
   width: 370px;
-  /*display: inline-block;*/
   list-style: none;
   border-radius: 5px;
 }
@@ -35,10 +29,6 @@ body {
   margin: 6px;
 }
 
-#todoBox {
-  /*overflow-y: scroll;*/
-}
-
 #todoText {
   margin: 10px;
   padding: 3px;
@@ -47,6 +37,10 @@ body {
 
 .todoTextClass {
   border: none;
+}
+
+.isCompleted {
+  color: grey;
 }
 
 .btn-group {
