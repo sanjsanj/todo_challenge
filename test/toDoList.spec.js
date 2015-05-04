@@ -10,12 +10,8 @@ describe('ToDoListController', function() {
 
   describe('initializes with', function(){
 
-    it('an empty active list', function() {
-      expect(ctrl.listActive).toEqual([]);
-    });
-
-    it('an empty completed list', function() {
-      expect(ctrl.listCompleted).toEqual([]);
+    it('an empty ToDo item list', function() {
+      expect(ctrl.itemList).toEqual([]);
     });
 
     it('a total task count of zero', function(){
@@ -39,26 +35,26 @@ describe('ToDoListController', function() {
     });
 
     it('knows item is active', function(){
-      expect(ctrl.listActive).toContain("Buy milk");
+      expect(ctrl.itemList).toContain("Buy milk");
     });
 
     it('can display an item', function(){
-      expect(ctrl.listActive).toEqual(["Buy milk"]);
+      expect(ctrl.itemList).toEqual(["Buy milk"]);
     });
 
     it('can display multiple items', function(){
       ctrl.addItem("Walk dog");
-      expect(ctrl.listActive).toEqual(["Buy milk", "Walk dog"]);
+      expect(ctrl.itemList).toEqual(["Buy milk", "Walk dog"]);
     });
 
     it('can edit an active item', function(){
       ctrl.editItem("Buy milk", "Drink milk");
-      expect(ctrl.listActive).toContain("Drink milk");
+      expect(ctrl.itemList).toContain("Drink milk");
     });
 
     it('can delete an active item', function(){
       ctrl.deleteItem("Buy milk");
-      expect(ctrl.listActive).toEqual([]);
+      expect(ctrl.itemList).toEqual([]);
     });
   });
 
@@ -70,31 +66,31 @@ describe('ToDoListController', function() {
     });
 
     it('knows item is no longer active', function(){
-      expect(ctrl.listActive).toEqual([]);
+      expect(ctrl.itemList).toEqual([]);
     });
 
     it('knows item is completed', function(){
-      expect(ctrl.listCompleted).toContain("Buy milk");
+      expect(ctrl.itemList).toContain("Buy milk");
     });
 
     it('can edit a completed item', function(){
       ctrl.editItem("Buy milk", "Drink milk");
-      expect(ctrl.listCompleted).toContain("Drink milk");
+      expect(ctrl.itemList).toContain("Drink milk");
     });
 
     it('can delete a completed item', function(){
       ctrl.deleteItem("Buy milk");
-      expect(ctrl.listCompleted).toEqual([]);
+      expect(ctrl.itemList).toEqual([]);
     });
 
     it('can mark it as active again', function(){
       ctrl.toggle("Buy milk");
-      expect(ctrl.listActive).toContain("Buy milk");
+      expect(ctrl.itemList).toContain("Buy milk");
     });
 
     it('can be cleared', function(){
       ctrl.clearCompleted();
-      expect(ctrl.listCompleted).toEqual([]);
+      expect(ctrl.itemList).toEqual([]);
     });
   });
 });
