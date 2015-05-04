@@ -63,15 +63,15 @@ describe('ToDoListController', function() {
   describe('After marking an item as complete it', function(){
 
     beforeEach(function(){
-          ctrl.newItem = "Buy milk";
-          ctrl.addItem();
-      ctrl.toggle("Buy milk");
+      ctrl.newItem = "Buy milk";
+      ctrl.addItem();
+      ctrl.itemList[0].isCompleted = true;
     });
 
-    it('knows item is no longer active', function(){
-      expect(ctrl.itemList).toEqual([]);
-    });
-
+    // it('knows item is no longer active', function(){
+    //   expect(ctrl.itemList).toEqual([]);
+    // });
+//
 //     it('knows item is completed', function(){
 //       expect(ctrl.itemList).toContain("Buy milk");
 //     });
@@ -81,19 +81,14 @@ describe('ToDoListController', function() {
 //       expect(ctrl.itemList).toContain("Drink milk");
 //     });
 //
-//     it('can delete a completed item', function(){
-//       ctrl.deleteItem("Buy milk");
-//       expect(ctrl.itemList).toEqual([]);
-//     });
-//
-//     it('can mark it as active again', function(){
-//       ctrl.toggle("Buy milk");
-//       expect(ctrl.itemList).toContain("Buy milk");
-//     });
-//
-//     it('can be cleared', function(){
-//       ctrl.clearCompleted();
-//       expect(ctrl.itemList).toEqual([]);
-//     });
+    it('can mark it as active again', function(){
+      ctrl.itemList[0].isCompleted = false;
+      expect(ctrl.itemList).toEqual([{'name': 'Buy milk', 'isCompleted': false}]);
+    });
+
+    it('can delete a completed item', function(){
+      ctrl.clearCompleted();
+      expect(ctrl.itemList).toEqual([]);
+    });
   });
 });
