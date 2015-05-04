@@ -1,9 +1,43 @@
+/*body {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}*/
+
 .container {
+  text-align: center;
   width: 400px;
   align-content: center;
 }
 
+#pageTitle {
+  /*margin-top: 15%;*/
+}
+
 .list-group-item {
+  display: inline-block;
   list-style: none;
-  border: none;
+}
+
+#formGroup {
+  margin: 12px;
+}
+
+#taskCount {
+  margin: 6px;
+}
+
+#todoBox {
+  /*overflow-y: scroll;*/
+}
+
+#todoText {
+  margin: 10px;
+  padding: 3px;
+}
+
+#clearButton {
+  margin: 12px;
 }

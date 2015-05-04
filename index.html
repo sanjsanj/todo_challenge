@@ -8,6 +8,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/toDoListController.js"></script>
   </head>
@@ -15,25 +16,28 @@
   <body ng-controller="ToDoListController as ctrl">
     <div class="container">
 
-    <h1>To Do List</h1>
+      <div class="page-header fixed">
+        <h1 class="list-group-item" id="pageTitle">To Do List</h1>
 
-      <form ng-submit="ctrl.addItem()" name="addItemForm" class="form-horizontal">
-        <input ng-model="ctrl.newItem" name="newItemName" id="newItemId" type="text" placeholder="What needs doing?" required>
-        <button ng-disabled="addItemForm.$invalid" class="btn" id="addNewItem">Add</button>
-      </form>
+        <form ng-submit="ctrl.addItem()" id="formGroup" name="addItemForm" class="form-horizontal">
+          <input ng-model="ctrl.newItem" name="newItemName" id="newItemId" type="text" placeholder="What needs doing?" required>
+          <button ng-disabled="addItemForm.$invalid" class="btn" id="addNewItem">Add</button>
+        </form>
 
-      <div ng-show="ctrl.itemList.length > 0">
-        Tasks: {{ctrl.itemList.length}}
-      </div>
+        <div ng-show="ctrl.itemList.length > 0" id="taskCount">
+          Tasks: <span class="badge">{{ctrl.itemList.length}}</span>
+        </div>
+     </div>
+
 
       <ul class="list-group-item">
         <li ng-repeat="item in ctrl.itemList track by $index">
           <input ng-model="item.isCompleted" id="completeCheckbox" type="checkbox">
-          <span ng-class="{'isCompleted':item.isCompleted}"><input ng-model="item.name" type="text"></span>
+          <span id="todoBox" ng-class="{'isCompleted':item.isCompleted}"><input id="todoText" ng-model="item.name" size="36" type="text"></span>
         </li>
       </ul>
 
-      <button ng-click="ctrl.clearCompleted()">Clear Completed</button>
+      <button ng-click="ctrl.clearCompleted()" id="clearButton" class="btn">Clear Completed</button>
 
     </div>
   </body>

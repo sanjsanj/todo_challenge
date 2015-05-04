@@ -24,14 +24,14 @@ describe('ToDoList', function() {
     var activeItems;
 
     beforeEach(function(){
-      activeItems = element.all(by.repeater('item in ctrl.itemList'));
+      activeItems = element.all(by.model('item.name'));
 
-      element(by.model('ctrl.newItem')).sendKeys("Get milk");
+      element(by.model('ctrl.newItem')).sendKeys('Get milk');
       element(by.buttonText('Add')).click();
     });
 
     it('it can display the item', function(){
-      expect(activeItems.getText()).toMatch(/Get milk/);
+      expect(element.all(by.model('item.name')).getText()).toMatch(/Get milk/);
     });
 
     it('it has a checkbox to mark item as completed', function(){
