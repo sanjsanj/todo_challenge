@@ -22,6 +22,9 @@ webdriver-manager start
 
 ####Tests:
 ```
+grunt
+```
+```
 protractor test/e2e/conf.js
 ```
 ```

@@ -8,14 +8,10 @@ describe('ToDoListController', function() {
     ctrl = $controller('ToDoListController');
   }));
 
-  describe('initializes with', function(){
+  describe('Initializes with', function(){
 
     it('an empty ToDo item list', function() {
       expect(ctrl.itemList).toEqual([]);
-    });
-
-    it('a total task count of zero', function(){
-      expect(ctrl.itemList.length).toEqual(0);
     });
 
     // it('an active task count of zero', function(){
@@ -48,16 +44,16 @@ describe('ToDoListController', function() {
       ctrl.addItem();
       expect(ctrl.itemList).toEqual([{'name': 'Buy milk', 'isCompleted': false}, {'name': 'Walk dog', 'isCompleted': false}]);
     });
-//
+
 //     it('can edit an active item', function(){
 //       ctrl.editItem("Buy milk", "Drink milk");
 //       expect(ctrl.itemList).toContain("Drink milk");
 //     });
-//
-//     it('can delete an active item', function(){
-//       ctrl.deleteItem("Buy milk");
-//       expect(ctrl.itemList).toEqual([]);
-//     });
+
+    it('cannot clear an active item', function(){
+      ctrl.clearCompleted();
+      expect(ctrl.itemList).toEqual([{'name': 'Buy milk', 'isCompleted': false}]);
+    });
   });
 
   describe('After marking an item as complete it', function(){
@@ -68,25 +64,21 @@ describe('ToDoListController', function() {
       ctrl.itemList[0].isCompleted = true;
     });
 
-    // it('knows item is no longer active', function(){
-    //   expect(ctrl.itemList).toEqual([]);
-    // });
-//
-//     it('knows item is completed', function(){
-//       expect(ctrl.itemList).toContain("Buy milk");
-//     });
-//
+    it('knows item is complete', function(){
+      expect(ctrl.itemList[0].isCompleted).toEqual(true);
+    });
+
 //     it('can edit a completed item', function(){
 //       ctrl.editItem("Buy milk", "Drink milk");
 //       expect(ctrl.itemList).toContain("Drink milk");
 //     });
-//
+
     it('can mark it as active again', function(){
       ctrl.itemList[0].isCompleted = false;
       expect(ctrl.itemList).toEqual([{'name': 'Buy milk', 'isCompleted': false}]);
     });
 
-    it('can delete a completed item', function(){
+    it('can clear a completed item', function(){
       ctrl.clearCompleted();
       expect(ctrl.itemList).toEqual([]);
     });

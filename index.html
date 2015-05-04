@@ -25,7 +25,7 @@
       <ul class="list-group">
         <li ng-repeat="item in ctrl.itemList track by $index">
           <input ng-model="item.isCompleted" type="checkbox">
-          <span ng-class="{'isCompleted':item.isCompleted}">{{item.name}}</span>
+          <span ng-class="{'isCompleted':item.isCompleted}"><input type="text" ng-model="item.name"></span>
         </li>
       </ul>
 
