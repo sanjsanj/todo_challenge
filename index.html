@@ -25,7 +25,7 @@
         </form>
 
         <div ng-show="ctrl.itemList.length > 0" id="taskCount">
-          Tasks: <span class="badge">{{ctrl.itemList.length}}</span>
+          Total Tasks: <span class="badge">{{ctrl.itemList.length}}</span>
         </div>
       </div>
 
@@ -37,14 +37,14 @@
       </ul>
 
       <ul class="list-group-item" ng-show="ctrl.isView(2)">
-        <li ng-repeat="item in ctrl.itemList track by $index">
+        <li ng-repeat="item in ctrl.itemList  | filter: { isCompleted: false }">
           <input ng-model="item.isCompleted" id="completeCheckbox" type="checkbox">
           <span id="todoBox" ng-class="{'isCompleted':item.isCompleted}"><input id="todoText" class="todoTextClass" ng-model="item.name" size="36" type="text"></span>
         </li>
       </ul>
 
       <ul class="list-group-item" ng-show="ctrl.isView(3)">
-        <li ng-repeat="item in ctrl.itemList track by $index | filter: item.isCompleted === true">
+        <li ng-repeat="item in ctrl.itemList | filter: { isCompleted: true }">
           <input ng-model="item.isCompleted" id="completeCheckbox" type="checkbox">
           <span id="todoBox" ng-class="{'isCompleted':item.isCompleted}"><input id="todoText" class="todoTextClass" ng-model="item.name" size="36" type="text"></span>
         </li>

@@ -1,14 +1,16 @@
 .container {
   text-align: center;
   width: 400px;
-  align-content: center;
+  /*align-content: center;*/
 }
 
 #pageTitle {
   /*margin-top: 15%;*/
-  margin: 20px;
+  /*margin: 20px;*/
+  /*margin: 0 auto;*/
   font-size: 3em;
   padding: 10px 50px;
+  width: 370px;
 }
 
 .list-group-item {
