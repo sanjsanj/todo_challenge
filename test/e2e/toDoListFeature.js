@@ -24,8 +24,8 @@ describe('ToDoList', function() {
     beforeEach(function(){
       activeItems = element.all(by.id('todoText'));
 
-      element(by.model('ctrl.newItem')).sendKeys('Get milk');
-      element(by.buttonText('Add')).click();
+      element(by.id('newItemId')).sendKeys('Get milk');
+      element(by.id('addNewItem')).click();
     });
 
     it('has a task count of 1', function(){
@@ -33,7 +33,7 @@ describe('ToDoList', function() {
     });
 
     it('it can display the item', function(){
-      expect(activeItems.getText()).toMatch(/Get milk/);
+      expect(element.all(by.css('.todoTextClass')).getAttribute('value')).toContain('Get milk');
     });
 
     it('it has a checkbox to mark item as completed', function(){
@@ -43,7 +43,7 @@ describe('ToDoList', function() {
     it('can clear completed items', function(){
       element(by.id('completeCheckbox')).click();
       element(by.buttonText('Clear Completed')).click();
-      expect(activeItems.getText()).toBeEmpty;
+      expect(element.all(by.css('.todoTextClass')).getAttribute('value')).toBeEmpty;
     });
   });
 });
