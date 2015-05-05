@@ -70,6 +70,58 @@ I want to be able to clear my completed tasks
 So I never see them again
 ```
 
+Unit Tests (Karma):
+-------------------
+```
+describe('ToDoListController', function() {
+
+  describe('Initializes with', function(){
+
+    it('an empty ToDo item list', function() {
+
+  describe('When adding items it', function(){
+
+    it('can display an item', function(){
+
+    it('knows item is not complete', function(){
+
+    it('can display multiple items', function(){
+
+    it('cannot clear an active item', function(){
+
+  describe('After marking an item as complete it', function(){
+
+    it('knows item is complete', function(){
+
+    it('can mark it as active again', function(){
+
+    it('can clear a completed item', function(){
+```
+
+Feature Tests (Protractor):
+---------------------------
+```
+describe('ToDoList', function() {
+
+  describe('When initialized', function(){
+
+    it('has a title', function() {
+
+    it('has an input form', function() {
+
+    it('has a submit button', function() {
+
+  describe('When creating an item', function(){
+
+    it('has a task count of 1', function(){
+
+    it('it can display the item', function(){
+
+    it('it has a checkbox to mark item as completed', function(){
+
+    it('can clear completed items', function(){
+```
+
 Aims:
 -----
 * Well written, well structured acceptance and unit tests

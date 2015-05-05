@@ -21,17 +21,19 @@ describe('ToDoList', function() {
 
   describe('When creating an item', function(){
 
-    var activeItems;
-
     beforeEach(function(){
-      activeItems = element.all(by.model('item.name'));
+      activeItems = element.all(by.id('todoText'));
 
       element(by.model('ctrl.newItem')).sendKeys('Get milk');
       element(by.buttonText('Add')).click();
     });
 
+    it('has a task count of 1', function(){
+      expect(element(by.id('taskCount')).getText()).toEqual('Total Tasks: 1');
+    });
+
     it('it can display the item', function(){
-      expect(element.all(by.model('item.name')).getText()).toMatch(/Get milk/);
+      expect(activeItems.getText()).toMatch(/Get milk/);
     });
 
     it('it has a checkbox to mark item as completed', function(){

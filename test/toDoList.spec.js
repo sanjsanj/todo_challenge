@@ -13,14 +13,6 @@ describe('ToDoListController', function() {
     it('an empty ToDo item list', function() {
       expect(ctrl.itemList).toEqual([]);
     });
-
-    // it('an active task count of zero', function(){
-    //   expect(ctrl.activeTaskCount()).toEqual(0);
-    // });
-    //
-    // it('a completed task count of zero', function(){
-    //   expect(ctrl.completedTaskCount()).toEqual(0);
-    // });
   });
 
 
@@ -45,11 +37,6 @@ describe('ToDoListController', function() {
       expect(ctrl.itemList).toEqual([{'name': 'Buy milk', 'isCompleted': false}, {'name': 'Walk dog', 'isCompleted': false}]);
     });
 
-//     it('can edit an active item', function(){
-//       ctrl.editItem("Buy milk", "Drink milk");
-//       expect(ctrl.itemList).toContain("Drink milk");
-//     });
-
     it('cannot clear an active item', function(){
       ctrl.clearCompleted();
       expect(ctrl.itemList).toEqual([{'name': 'Buy milk', 'isCompleted': false}]);
@@ -67,11 +54,6 @@ describe('ToDoListController', function() {
     it('knows item is complete', function(){
       expect(ctrl.itemList[0].isCompleted).toEqual(true);
     });
-
-//     it('can edit a completed item', function(){
-//       ctrl.editItem("Buy milk", "Drink milk");
-//       expect(ctrl.itemList).toContain("Drink milk");
-//     });
 
     it('can mark it as active again', function(){
       ctrl.itemList[0].isCompleted = false;
