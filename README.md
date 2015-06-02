@@ -1,6 +1,6 @@
 #Todo Challenge
 
-[![Build Status](https://travis-ci.org/sanjsanj/todo_challenge.svg?branch=master)](https://travis-ci.org/sanjsanj/todo_challenge)  [![Coverage Status](https://coveralls.io/repos/sanjsanj/todo_challenge/badge.svg)](https://coveralls.io/r/sanjsanj/todo_challenge)
+[![Build Status](https://travis-ci.org/sanjsanj/todo_challenge.svg?branch=master)](https://travis-ci.org/sanjsanj/todo_challenge)  [![Coverage Status](https://coveralls.io/repos/sanjsanj/todo_challenge/badge.svg)](https://coveralls.io/r/sanjsanj/todo_challenge)  [![Code Climate](https://codeclimate.com/github/sanjsanj/todo_challenge/badges/gpa.svg)](https://codeclimate.com/github/sanjsanj/todo_challenge)
 
 ###[Use the web app on Heroku]()
 
@@ -73,29 +73,20 @@ So I never see them again
 Unit Tests (Karma):
 -------------------
 ```
-describe('ToDoListController', function() {
+ToDoListController
+  Initializes with
+    an empty ToDo item list
 
-  describe('Initializes with', function(){
+  When adding items it
+    can display an item
+    knows item is not complete
+    can display multiple items
+    cannot clear an active item
 
-    it('an empty ToDo item list', function() {
-
-  describe('When adding items it', function(){
-
-    it('can display an item', function(){
-
-    it('knows item is not complete', function(){
-
-    it('can display multiple items', function(){
-
-    it('cannot clear an active item', function(){
-
-  describe('After marking an item as complete it', function(){
-
-    it('knows item is complete', function(){
-
-    it('can mark it as active again', function(){
-
-    it('can clear a completed item', function(){
+  After marking an item as complete it
+    knows item is complete
+    can mark it as active again
+    can clear a completed item
 ```
 
 Feature Tests (Protractor):
