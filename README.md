@@ -10,8 +10,8 @@
 - [Development blog](#development-blog)
 - [How to run](#how-to-run)
 - [User stories](#user-stories)
-- [Unit tests (Karma)](#unit-tests-(karma))
-- [Feature tests (Protractor)](#feature-tests-(protractor))
+- [Unit tests (Karma)](#unit-tests-karma)
+- [Feature tests (Protractor)](#feature-tests-protractor)
 - [Aims](#aims)
 
 ------
