@@ -17,12 +17,12 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-      'src/*.js': ['coverage']
+      'js/**/*.js': ['coverage']
     },
-    reporters: ['progress', 'coverage'],
+    reporters: ['progress', 'coverage', 'coveralls'],
 
     coverageReporter: {
-      type : 'html',
+      type : 'lcov',
       dir : 'coverage/',
       includeAllSources: true
     },
