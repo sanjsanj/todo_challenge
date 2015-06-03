@@ -76,6 +76,7 @@ Unit Tests (Karma):
 ToDoListController
   Initializes with
     an empty ToDo item list
+    view set to 1
 
   When adding items it
     can display an item
@@ -87,30 +88,25 @@ ToDoListController
     knows item is complete
     can mark it as active again
     can clear a completed item
+
+  When toggling view
+    has the right view
 ```
 
 Feature Tests (Protractor):
 ---------------------------
 ```
-describe('ToDoList', function() {
+ToDoList
+  When initialized
+    has a title
+    has an input form
+    has a submit button
 
-  describe('When initialized', function(){
-
-    it('has a title', function() {
-
-    it('has an input form', function() {
-
-    it('has a submit button', function() {
-
-  describe('When creating an item', function(){
-
-    it('has a task count of 1', function(){
-
-    it('it can display the item', function(){
-
-    it('it has a checkbox to mark item as completed', function(){
-
-    it('can clear completed items', function(){
+  When creating an item
+    has a task count of 1
+    can display the item
+    has a checkbox to mark item as completed
+    can clear completed items
 ```
 
 Aims:

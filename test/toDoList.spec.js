@@ -13,6 +13,10 @@ describe('ToDoListController', function() {
     it('an empty ToDo item list', function() {
       expect(ctrl.itemList).toEqual([]);
     });
+
+    it('view set to 1', function(){
+      expect(ctrl.isView(1)).toEqual(true);
+    });
   });
 
 
@@ -63,6 +67,13 @@ describe('ToDoListController', function() {
     it('can clear a completed item', function(){
       ctrl.clearCompleted();
       expect(ctrl.itemList).toEqual([]);
+    });
+  });
+
+  describe('When toggling view', function(){
+    it('has the right view', function(){
+      ctrl.setView(2);
+      expect(ctrl.view).toEqual(2);
     });
   });
 });
