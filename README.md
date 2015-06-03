@@ -1,45 +1,60 @@
-#Todo Challenge
+#ToDoList Manager
+###Meticulously hand crafted in JavaScript and AngularJS
+###Tested with care in Karma and Protractor
 
 [![Build Status](https://travis-ci.org/sanjsanj/todo_challenge.svg?branch=master)](https://travis-ci.org/sanjsanj/todo_challenge)  [![Coverage Status](https://coveralls.io/repos/sanjsanj/todo_challenge/badge.svg)](https://coveralls.io/r/sanjsanj/todo_challenge)  [![Code Climate](https://codeclimate.com/github/sanjsanj/todo_challenge/badges/gpa.svg)](https://codeclimate.com/github/sanjsanj/todo_challenge)
 
-###[Use the web app on Heroku]()
+####Table of contents
+
+- [Specification](#specification)
+- [Development blog](#development-blog)
+- [How to run](#how-to-run)
+- [User stories](#user-stories)
+- [Unit tests (Karma)](#unit-tests-(karma))
+- [Feature tests (Protractor)](#feature-tests-(protractor))
+- [Aims](#aims)
+
+------
 
 ![todo challenge screenshot](http://sanjsanj.github.io/images/week8_todo.png)
 
-Task:
 -----
+
+####Specification
+
 Build a Todo list as a mini front-end application to satisfy the provided user stories (listed below).
 
-Development Blog:
 -----------------
+
+####Development blog
+
 - [Day 0](http://sanjsanj.github.io/Week%207,%20Day%205/)
 - [Day 1](http://sanjsanj.github.io/Week%207,%20Day%206/)
 - [Day 2](http://sanjsanj.github.io/Week%207,%20Day%207/)
 - [Day 3](http://sanjsanj.github.io/Week%208,%20Day%201/)
 
-How To Run:
 -----------
-####Setup:
+
+####How to run
+
+######Setup
+
 ```
 npm start
-```
-```
 webdriver-manager start
 ```
 
-####Tests:
-```
-grunt
-```
-```
-protractor test/e2e/conf.js
-```
+######Tests
+
 ```
 karma start test/karma.conf.js
+protractor test/e2e/conf.js
 ```
 
-User Stories:
 -------------
+
+####User stories
+
 ```
 As a forgetful person
 I want to store my tasks
@@ -54,7 +69,7 @@ I want to mark my tasks as done
 So that I don't do them twice
 ```
 
-**Bonus:**
+**Bonus**
 
 ```
 As a person with a lot of tasks
@@ -70,8 +85,10 @@ I want to be able to clear my completed tasks
 So I never see them again
 ```
 
-Unit Tests (Karma):
 -------------------
+
+####Unit tests (Karma)
+
 ```
 ToDoListController
   Initializes with
@@ -93,8 +110,10 @@ ToDoListController
     has the right view
 ```
 
-Feature Tests (Protractor):
 ---------------------------
+
+####Feature tests (Protractor)
+
 ```
 ToDoList
   When initialized
@@ -109,8 +128,10 @@ ToDoList
     can clear completed items
 ```
 
-Aims:
 -----
+
+####Aims
+
 * Well written, well structured acceptance and unit tests
 * Clear and expressive JavaScript
 * Good HTML5 markup and CSS
